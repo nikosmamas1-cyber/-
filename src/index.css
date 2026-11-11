@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-brand-coral: #f26464;
+  --color-brand-coral-light: #fff1f1;
+  --color-brand-coral-dark: #d94848;
+  --color-brand-coral-50: #fef2f2;
+  --color-brand-coral-100: #ffe1e1;
+  
+  --color-brand-black: #0f172a;
+  --color-brand-charcoal: #1e293b;
+  --color-brand-muted: #64748b;
+  --color-brand-border: #e2e8f0;
+  --color-brand-card: #ffffff;
+  --color-brand-bg: #fafbfc;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glass effect */
+.glass-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
