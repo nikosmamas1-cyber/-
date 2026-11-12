@@ -138,7 +138,7 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
           </nav>
 
           {/* Right Header Actions */}
-          <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
 
             {/* Direct Phone / Contact */}
             <a
@@ -160,16 +160,16 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2 shrink-0">
             <a
               href={`mailto:${AGENCY_INFO.email}`}
-              className="px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#f26464]"
+              className="whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-bold text-white bg-[#f26464] shadow-xs"
             >
               Συνεργασία
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition focus:outline-none"
+              className="p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100 transition focus:outline-none"
               aria-label="Μενού"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -180,7 +180,7 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-white border-b border-slate-200 shadow-2xl p-5 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden absolute inset-x-0 top-full bg-white border-b border-slate-200 shadow-2xl p-5 max-h-[82vh] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col gap-1.5">
             {navItems.map((item) => (
               <button
@@ -211,7 +211,7 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
                     className="text-left py-2 px-2 text-sm text-slate-600 hover:text-[#f26464] transition flex items-center justify-between"
                   >
                     <span>{srv.title}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                   </button>
                 ))}
               </div>
@@ -220,21 +220,10 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
             <div className="h-px bg-slate-100 my-2" />
 
             {/* Mobile Actions */}
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenWordPressModal();
-              }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 bg-slate-50 hover:bg-white"
-            >
-              <Code2 className="w-4 h-4 text-[#f26464]" />
-              <span>WordPress Ready Export Hub</span>
-            </button>
-
             <a
               href={`mailto:${AGENCY_INFO.email}`}
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-sm font-bold text-white bg-[#f26464] shadow-md shadow-[#f26464]/20 mt-2"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-sm font-bold text-white bg-[#f26464] shadow-md shadow-[#f26464]/20 mt-1"
             >
               <span>Ξεκινήστε τη Συνεργασία</span>
               <ArrowRight className="w-4 h-4" />

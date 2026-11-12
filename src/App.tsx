@@ -85,7 +85,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fafbfc] text-[#0f172a] font-sans selection:bg-[#f26464]/20 selection:text-[#f26464]">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-[#fafbfc] text-[#0f172a] font-sans selection:bg-[#f26464]/20 selection:text-[#f26464]">
       {/* Sticky Premium Header */}
       <Header
         currentPath={currentPath}
@@ -94,7 +94,7 @@ export default function App() {
       />
 
       {/* Main Page Content */}
-      <main className="flex-1">{renderCurrentView()}</main>
+      <main className="flex-1 min-w-0 w-full">{renderCurrentView()}</main>
 
       {/* Comprehensive Footer */}
       <Footer

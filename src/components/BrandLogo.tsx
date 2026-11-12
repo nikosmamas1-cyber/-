@@ -12,20 +12,20 @@ interface BrandLogoProps {
  */
 export const BrandLogo: React.FC<BrandLogoProps> = ({ size = 'lg', className = '' }) => {
   const sizeClasses = {
-    sm: 'h-10 sm:h-11',
-    md: 'h-12 sm:h-14',
-    lg: 'h-14 sm:h-16 md:h-[68px]',
-    xl: 'h-16 sm:h-20 md:h-[84px]',
+    sm: 'h-10 w-[116px] sm:h-11 sm:w-[128px]',
+    md: 'h-12 w-[140px] sm:h-14 sm:w-[162px]',
+    lg: 'h-12 w-[140px] sm:h-16 sm:w-[186px] md:h-[68px] md:w-[197px]',
+    xl: 'h-16 w-[186px] sm:h-20 sm:w-[232px] md:h-[84px] md:w-[244px]',
   }[size];
 
   return (
     <div
-      className={`relative overflow-hidden flex items-center justify-center aspect-[2.9/1] select-none ${sizeClasses} ${className}`}
+      className={`relative overflow-hidden shrink-0 select-none ${sizeClasses} ${className}`}
     >
       <img
         src={AGENCY_INFO.logoUrl}
         alt="Smart Culture Logo"
-        className="w-[132%] max-w-none h-auto shrink-0 -translate-x-[1%] translate-y-[0.6%] object-contain mix-blend-multiply"
+        className="absolute left-1/2 top-1/2 w-[132%] max-w-none h-auto -translate-x-[51%] -translate-y-[49.4%] object-contain mix-blend-multiply pointer-events-none"
       />
     </div>
   );
