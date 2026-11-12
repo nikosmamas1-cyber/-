@@ -139,15 +139,6 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
 
           {/* Right Header Actions */}
           <div className="hidden sm:flex items-center gap-2.5 shrink-0">
-            {/* WordPress Export Hub Trigger */}
-            <button
-              onClick={onOpenWordPressModal}
-              title="Επεξεργασία & Εξαγωγή σε WordPress"
-              className="whitespace-nowrap hidden xl:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-full border border-slate-200 text-slate-600 bg-slate-50 hover:bg-white hover:border-[#f26464] hover:text-[#f26464] transition shadow-xs cursor-pointer"
-            >
-              <Code2 className="w-3.5 h-3.5 shrink-0" />
-              <span>WordPress Ready</span>
-            </button>
 
             {/* Direct Phone / Contact */}
             <a
