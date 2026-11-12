@@ -150,23 +150,23 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
             </a>
 
             {/* Primary Action Button */}
-            <a
-              href={`mailto:${AGENCY_INFO.email}`}
+            <button
+              onClick={() => handleLinkClick('/contact')}
               className="whitespace-nowrap inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#f26464] hover:bg-[#e04e4e] active:scale-[0.98] transition shadow-md shadow-[#f26464]/20 cursor-pointer"
             >
               <span>Ξεκινήστε τη Συνεργασία</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-2 shrink-0">
-            <a
-              href={`mailto:${AGENCY_INFO.email}`}
-              className="whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-bold text-white bg-[#f26464] shadow-xs"
+            <button
+              onClick={() => handleLinkClick('/contact')}
+              className="whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-bold text-white bg-[#f26464] shadow-xs cursor-pointer"
             >
               Συνεργασία
-            </a>
+            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100 transition focus:outline-none"
@@ -220,14 +220,13 @@ export const Header: React.FC<Props> = ({ currentPath, onNavigate, onOpenWordPre
             <div className="h-px bg-slate-100 my-2" />
 
             {/* Mobile Actions */}
-            <a
-              href={`mailto:${AGENCY_INFO.email}`}
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-sm font-bold text-white bg-[#f26464] shadow-md shadow-[#f26464]/20 mt-1"
+            <button
+              onClick={() => handleLinkClick('/contact')}
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-sm font-bold text-white bg-[#f26464] shadow-md shadow-[#f26464]/20 mt-1 cursor-pointer"
             >
               <span>Ξεκινήστε τη Συνεργασία</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </button>
           </div>
         </div>
       )}
